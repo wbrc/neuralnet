@@ -11,14 +11,14 @@ three neurons and an output layer with one neuron:
 n := neuralnet.NewNeuralNetwork([]uint{2, 3, 1})
 ```
 
-Training the network:
+Train the network:
 ```go
 input := []float64{1.0, 1.0}
 output := []float64{0.0}
 n.Train(input, output, 0.25)
 ```
 
-Predicting the output:
+Predict the output:
 ```go
 prediction := n.Predict(data)
 ```

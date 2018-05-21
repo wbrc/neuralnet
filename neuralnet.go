@@ -1,3 +1,5 @@
+// Package neuralnet provides basic feed-forward
+// neural-networks
 package neuralnet
 
 import (
@@ -27,7 +29,7 @@ type layer struct {
 	Neurons []neuron
 }
 
-// represents the neural network as layers and neurons
+// NeuralNetwork represents the neural network as layers and neurons
 type NeuralNetwork struct {
 	Layers []layer
 	a      func(float64) float64 // activation function
@@ -178,6 +180,10 @@ func (n *NeuralNetwork) Train(input, output []float64, eta float64) {
 
 // Predict will feedforward the input and then return the prediction
 func (n *NeuralNetwork) Predict(input []float64) []float64 {
+
+	if len(input) != len(n.Layers[0].Neurons) {
+		panic("invalid input length")
+	}
 
 	n.feedforward(input)
 
