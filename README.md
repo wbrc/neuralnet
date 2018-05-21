@@ -3,6 +3,7 @@ Create simple feed forward networks in Go
 
 [![GoDoc](https://godoc.org/github.com/goml/gobrain?status.svg)](https://godoc.org/github.com/wbrc/neuralnet)
 [![Build Status](https://travis-ci.com/wbrc/neuralnet.svg?branch=master)](https://travis-ci.org/wbrc/neuralnet)
+[![codecov](https://codecov.io/gh/wbrc/neuralnet/branch/master/graph/badge.svg)](https://codecov.io/gh/wbrc/neuralnet)
 
 ## Getting Started
 Create a network with two input neurons, one hidden layer with

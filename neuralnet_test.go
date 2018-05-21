@@ -120,8 +120,8 @@ func genRandomTestData() [][][]float64 {
 	d := make([][][]float64, 0, nrOfDataSets)
 	for i := 0; i < nrOfDataSets; i++ {
 		d = append(d, [][]float64{
-			[]float64{rand.Float64(), rand.Float64(), rand.Float64()},
-			[]float64{rand.Float64()},
+			{rand.Float64(), rand.Float64(), rand.Float64()},
+			{rand.Float64()},
 		})
 	}
 

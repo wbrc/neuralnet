@@ -33,7 +33,7 @@ type layer struct {
 type NeuralNetwork struct {
 	Layers []layer
 	a      func(float64) float64 // activation function
-	da     func(float64) float64 // derivation of activatin function
+	da     func(float64) float64 // derivation of activation function
 }
 
 func sigmoid(z float64) float64 {
