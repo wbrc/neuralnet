@@ -12,7 +12,7 @@ three neurons and an output layer with one neuron:
 ```go
 n := neuralnet.NewNeuralNetwork([]uint{2, 3, 1})
 ```
-
+### Basic usage
 Train the network:
 ```go
 input := []float64{1.0, 1.0}
@@ -23,6 +23,20 @@ n.Train(input, output, 0.25)
 Predict the output:
 ```go
 prediction := n.Predict(data)
+```
+
+### Persisting the network
+
+Persist the network:
+```go
+file, _ := os.Create("network.json")
+n.Dump(file)
+```
+
+Load persisted network:
+```go
+file, _ := os.Open("network.json")
+n, _ = neuralnet.LoadNeuralNetwork(ifile)
 ```
 
 For more detailed info see `examples` folder
