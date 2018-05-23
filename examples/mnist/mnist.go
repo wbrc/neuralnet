@@ -11,15 +11,18 @@ import (
 func main() {
 
 	// load mnist data
+	log.Print("load mnist dataset")
 	train, test, err := GoMNIST.Load("./src/github.com/petar/GoMNIST/data")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 
-	n := neuralnet.NewNeuralNetwork([]uint{784, 40, 30, 10})
+	// you can fiddle around with # of hidden layers and # of neurons here
+	n := neuralnet.NewNeuralNetwork([]uint{784, 30, 10})
 	lrate := 0.35
 
 	// train the network
+	log.Print("train the network. 10 epochs")
 	for epoch := 0; epoch < 10; epoch++ {
 		log.Printf("Epoch %d", epoch+1)
 		// randomly go through the dataset
@@ -45,6 +48,7 @@ func main() {
 	wrong := 0
 
 	// test the network
+	log.Print("test network")
 	for i := 0; i < test.Count(); i++ {
 		image, label := test.Get(i)
 
