@@ -7,10 +7,10 @@ Create simple feed forward networks in Go
 [![rcard](https://goreportcard.com/badge/github.com/wbrc/neuralnet)](https://goreportcard.com/report/github.com/wbrc/neuralnet)
 
 ## Getting Started
-Create a network with two input neurons, one hidden layer with
-three neurons and an output layer with one neuron:
+Create a network with three input neurons, two hidden layers with
+four and two neurons and an output layer with one neuron:
 ```go
-n := neuralnet.NewNeuralNetwork([]uint{2, 3, 1})
+n := neuralnet.NewNeuralNetwork([]uint{3, 4, 2, 1})
 ```
 ### Basic usage
 Train the network:
