@@ -75,9 +75,9 @@ func newNeuron(synapses uint) neuron {
 
 	n.weights = make([]float64, synapses, synapses)
 	for i := range n.weights {
-		n.weights[i] = R.NormFloat64()
+		n.weights[i] = R.Float64() - 0.5
 	}
-	n.bias = R.NormFloat64()
+	n.bias = R.Float64() - 0.5
 
 	return n
 }
